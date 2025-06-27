@@ -57,6 +57,7 @@ exports.setDefaults = (defaultProps) => {
     }
   }
 };
+
 exports.fetchUserByNameAndUsersCompany = async (name, services) => {
   // get the user list
   const userList = await services.fetchUsers();
