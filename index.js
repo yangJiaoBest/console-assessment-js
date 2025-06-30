@@ -36,11 +36,13 @@ exports.applyStatusColor = (colorMap, statusArray) => {
   }
 
   return statusArray.map((item) => {
+    const color = statusToColor[item.status];
+    if (!color) return null;
     return {
       ...item,
       color: statusToColor[item.status]
     }
-  });
+  }).filter(Boolean);
 };
 
 exports.createGreeting = (greet, greeting) => {

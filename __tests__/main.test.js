@@ -95,6 +95,9 @@ describe('Dev Assessment', () => {
           {
             status: 400,
           },
+          {
+            status: 408,
+          },
         ],
       )).toEqual([
         {
